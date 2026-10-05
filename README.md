@@ -7,6 +7,7 @@ Lab work for SUTD 50.046 Cloud Computing and IoT (2026).
 | Lab | Topic | Contents |
 | --- | --- | --- |
 | [Lab 1](Lab%201/) | Set Up the Things | Blink an external LED on a MakePython ESP32 with MicroPython |
+| [Lab 2](Lab%202/) | Connect to Cloud | Read a DS18B20 and publish temperature to AWS IoT |
 
 ## Lab 1: Set Up the Things
 
@@ -27,3 +28,16 @@ Or from the command line:
 pip install mpremote
 mpremote connect COM3 fs cp "Lab 1/submission/main.py" :main.py + reset
 ```
+
+## Lab 2: Connect to Cloud
+
+The ESP-IDF reference code is an independent clone in `Lab 2/CCIOTLabs/` (ignored
+by the parent repository). Use its `lab1_2_1` branch for the local sensor and
+display task. When ready for AWS IoT, switch inside that clone to `lab1_2_2`:
+
+```powershell
+git -C "Lab 2/CCIOTLabs" switch --track origin/lab1_2_2
+```
+
+Configure your own SUTD-Wifi credentials with `idf.py menuconfig` before flashing
+the lab app. Do not commit credentials or device private keys.
