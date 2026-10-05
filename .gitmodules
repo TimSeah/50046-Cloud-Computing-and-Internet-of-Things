@@ -1,0 +1,3 @@
+[submodule "CCIOTLabs"]
+	path = CCIOTLabs
+	url = https://github.com/TONYSKYZENG/CCIOTLabs.git
